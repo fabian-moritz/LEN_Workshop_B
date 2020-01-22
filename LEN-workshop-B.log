@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.12.10)  22 JAN 2020 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.12.10)  22 JAN 2020 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,24 +1200,21 @@ Package rerunfilecheck Info: File `LEN-workshop-B.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 27421 strings out of 492164
- 538062 string characters out of 6129087
+ 27419 strings out of 492164
+ 538019 string characters out of 6129087
  730868 words of memory out of 5000000
- 31451 multiletter control sequences out of 15000+600000
+ 31450 multiletter control sequences out of 15000+600000
  561392 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,19n,82p,10074b,848s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist
-, replaced by a fixed one
-
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1
-/urw/helvetic/uhvb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/u
-hvr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on LEN-workshop-B.pdf (5 pages, 312827 bytes).
+{c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic
+/uhvr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on LEN-workshop-B.pdf (5 pages, 312786 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
+ 97 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
  35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
