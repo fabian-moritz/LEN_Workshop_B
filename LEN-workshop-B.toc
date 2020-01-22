@@ -1,13 +1,4 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Durchführung}{4}{section.1}%
-\contentsline {section}{\numberline {2}Dokumentation}{5}{section.2}%
-\contentsline {section}{\numberline {3}Abgabe der Projektarbeit}{7}{section.3}%
-\contentsline {section}{\numberline {4}Leitpunkte der Bewertung}{7}{section.4}%
-\contentsline {section}{\numberline {5}Vorlage}{8}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Gleichungen}{9}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Einheiten}{9}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Abbildungen}{9}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Tabellen}{9}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Aufzählungen}{9}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Literatur}{10}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Quelltext}{10}{subsection.5.7}%
+\contentsline {section}{\numberline {1}Grundlagen}{4}{section.1}%
+\contentsline {section}{\numberline {2}Aufgabe 1}{4}{section.2}%
+\contentsline {section}{\numberline {3}Aufgabe 2}{4}{section.3}%
