@@ -1,5 +1,19 @@
 \begin{abstract}
 \section*{Zielsetzung}
-Aufgabe der Arbeit ist die Entwicklung eines 2-Band-Equalizers. Dieser soll durch unabhängig Hoch- und Tiefpassfilter realisiert werden, deren Ausgänge danach in einer Addiererschaltung zusammengeführt werden. Diese Art des Zusammenführens ermöglicht eine genauere Soundeinstellung.
+Aufgabe der Arbeit ist die Entwicklung eines Klangreglers, dessen Hauptfunktion die Verbesserung der Sprachverständlichkeit in Räumen wie z.B. Hörsälen ist.\\
+Die Schaltung soll es ermöglichen die Höhen und Tiefen des Hauptsprachbereichs eines Audiosignals separat unterschiedlich stark übertragen zu können.\\
+Das von uns herausgearbeitete Konzept sieht eine Spaltung des Eingangsignals in zwei neue Signale vor. Zur Realisierung werden hierfür ein Hoch- und ein Tiefpass verwendet.
+Man erhält ein Signal bestehend aus den hohen Frequenzen und eines bestehend aus den tiefen.\\
+Anzumerken ist, dass es sich bei beiden Filtern um Filter 2.Ordnung mit der selben Güte handelt. Beide haben einen Verstärkungsfaktor im Durchlassbereich von 1 und bei beiden liegt die Grenzfrequenz bei 1kHZ.
+Beide Schaltungen verhalten sich also effektiv gleich, mit dem Unterschied, dass der Hochpass hohe Frequenzen und der Tiefpass tiefe Frequenzen durchlässt.\\
+Diese Aufteilung der Frequenzen kann an und für sich schon nützlich sein. So werden in der Praxis die getrennten Signale auf unterschiedliche Lautsprecher gegeben, da diese je nach Membrangröße bei unterschiedlichen Frequenzen ihren besten Klang entwickeln.\\
+In dieser Arbeit wird jedoch die Weiterverarbeitung der Signale in einem Addierer erstrebt.
+Hierbei wird der Addierer so konzipiert, dass beide Eingangsignale sich jeweils als Funktion in Abhängigkeit eines Widerstandes darstellen lassen.
+So lassen sich die hohen und tiefen Frequenzen mittels eines Drehwiderstandes unabhängig voneinander regeln und in einem kombinierten Ausgangssignal weiterleiten.\\
+Der in dieser Arbeit konzipierte Klangregler nennt sich 2-Band Equalizer. Die Zwei steht hierbei für die Aufteilung der Frequenz des Signals in zwei Bereiche, also für die Anzahl der Regler (Dreh-/Schiebewiderstände).
+Somit zählt er zu den kleinen graphischen Equalizern die in der Regel in 2 bis 10 Kanäle aufgeteilt sind.\cite{Wiki Equalizer}\\
+In der professionellen Musik-/Eventbranche werden typischerweise Equalizer mit "31 Frequenzbändern von je 1/3 Oktave Breite"\cite{Wiki Equalizer} eingesetzt.
+Eine Oktave beschreibt die Frequenzdifferenz zweier Töne, wobei die Frequenz des einen Tons das doppelte der Frequenz des anderen beträgt.\\
+Trotz der geringen Anzahl an Bändern zeigt der von uns entworfene Equalizer das Potential von Hoch- und Tiefpassschaltungen und deren Kombination in der Akkustik um Klang an Raum- und Lautsprechergegebenheiten anpassen zu\\ können.
 
 \end{abstract}
