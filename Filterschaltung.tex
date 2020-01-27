@@ -1,7 +1,36 @@
 \section{Filterschaltung}
-Es wird die benötigte Filterschaltung konzipiert, gebaut und ausgemessen.
+In diesem Kapitel werden die Filterschaltungen zum splitten des Frequenzbereiches des Eingangssignals geplant, simuliert und gebaut.
 
 \subsection{Methoden}
+Das Teilen des Eingangssignals in zwei Frequenzbereiche lässt sich mit einem Hoch- und einem Tiefpass realisieren. Wichtig ist hierbei, dass beide Filter die Gleiche Grenzfrequenz besitzen, damit keine Frequenzen 'verloren gehen'. 1kHz ist eine sinnvolle Grenzfrequenz, da diese Frequenz in der logarithmischen Mitte zwischen 200Hz und 5000Hz liegt. Diese Werte entsprechen dem Frequenzintervall des Hauptsprachbereichs welche sich dem Diagramm\cite{Hoerbereichdiagramm} der Aufgabenstellung entnehmen lassen. \\
+Des weiteren müssen beide Filter das Eingangssignal um den Faktor 1 verstärken und von 2ter Ordnung sein. Dies lässt sich mit, nach ihren Erfindern benannten, Sallen-Key Filtern erreichen.
+Diese Annahme bezogen wir aus dem LEN-Skript.\\
+Um eine Verstärkung von 1 zu erzielen bedarf es einer direkten Rückkopplung des Ausgangssignals auf den invertierenden Eingang des OpAmps. Die Schaltung im Computerprogramm LTSpice gebaut ist in folgender Abbildung zu sehen:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{pics/SpiceSchaltungFilter.PNG}
+	\caption{Aufbau Hoch- und Tiefpass in LTSpice}
+\end{figure}
+
+Im folgenden werden die Werte für die Widerstände und die Kondensatoren bestimmt.
+Für die Güte des Tiefpass-Filter gilt:
+
+$$ Q = \frac{1}{2}*\sqrt{\frac{C_{1}}{C_{2}}} $$
+
+Die Anforderungen an die Filter verlangen eine Güte von 0,5. Daher gilt $C_{1}=C_{2}$.\\
+Für $\omega_{0}$ beim Tiefpass ist gegeben:
+
+$$\omega_{0}=\frac{1}{R\cdot\sqrt{C_{1} \cdot C_{2}}}$$
+
+Da $C_{1}$ und $C_{2}$ den gleichen Wert haben sollen und die Grenzfrequenz $f_{0}=1\si{\kilo\hertz}$ betragen soll, ergibt sich:
+
+$$\omega_{0}=2\pi f_{0} \approx 6283\si{\hertz} \, \Leftrightarrow \,\omega_{0}=\frac{1}{R\cdot C}\approx 6283\si{\hertz} $$
+
+Da die uns zur Verfügung stehende Anzahl and verschiedenen Widerständen größer ist als die der Kondensatoren, haben wir $C_{1}=C_{2}=100\si{\nano\farad}$ gewählt.
+Daraus ergibt sich $R=1592\si{\ohm}$. Damit erfüllt der Tiefpass-Filter alle geforderten Eigenschaften.
+
+
 
 \subsection{Ergebnisse}
 
