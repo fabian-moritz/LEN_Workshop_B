@@ -5,4 +5,15 @@ Das Herausfiltern einzelner Frequenzen oder Frequenzbänder spielt in fast jedem
 Auch in analogen Audiomischpulten sind eine Menge Filterschaltungen verbaut. So ermöglichen Filterschaltungen dort verscheidene Frequenzbänder, die auch in ihrer Breite und ihrem Q-Faktor variabel sein können, abzudämpfen oder zu verstärken. Im Bereich der Veranstaltungstechnik werden mittels Bandstop-filtern Raumresonanzfrequenzen herrausgefiltert, um Rückkopplungen zu vermeiden. Trotz des simplen Aufbaus dieses Problems, lässt sich die weitreichende Bedeutung der Filterschaltungen für die Elektrotechnik erkennen.
 
 \subsection{Grundlagen}
-blabla technische Grundlagen
+Man unterscheidet anhand ihrer Charakteristiken 4 verschiedene Arten von Filtern:
+\begin{itemize}
+\item Der Hochpassfilter dämpft Signale, deren Frequenz unterhalb einer Grenzfrequenzliegen ab und lässt höhere Frequenzen ungehindert passieren.
+\item Der Tiefpassfilter dämpft analog zum Hochpassfilter Signale, deren Frequenz oberhalb einer bestimmten Grenzfrequenz liegen ab und lässt tiefe Frequenzen ungehindert passieren.
+\item Der Bandpass besitzt sowohl eine obere Grenzfrequenz, sodass Signale oberhalb besagter Frequenz gedämpft werden, als auch eine untere Grenzfrequenz, sodass Signale unterhalb dieser Frequenz gedämpft werden.
+\item Außerdem gibt es die Bandsperre, die Signale zwischen einer oberen und unteren Grenzfrequenz dämpft und alle weiteren Signale ungehindert passieren lässt.
+\end{itemize}
+Die Wirkungsweise all dieser Filter fußt auf folgenden Phänomenen:
+\begin{itemize}
+\item Der induktive Blindwiderstand eines Kondensators wächst proportional zur Frequenz der anliegenden Wechselspannung. ($X_{L}=\frac{1}{j*\omega+L}$) \cite{IBK}
+\item Der induktive Blindwiderstand einer Spule wächst proportional zur Frequenz der anliegenden Wechselspannung. ($\,X-_{L}=j*\omega+L$) \cite{IBS}
+\end{itemize}
