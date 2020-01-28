@@ -7,13 +7,16 @@ Auch in analogen Audiomischpulten sind eine Menge Filterschaltungen verbaut. So 
 \subsection{Grundlagen}
 Man unterscheidet anhand ihrer Charakteristiken 4 verschiedene Arten von Filtern:
 \begin{itemize}
-\item Der Hochpassfilter dämpft Signale, deren Frequenz unterhalb einer Grenzfrequenzliegen ab und lässt höhere Frequenzen ungehindert passieren.
-\item Der Tiefpassfilter dämpft analog zum Hochpassfilter Signale, deren Frequenz oberhalb einer bestimmten Grenzfrequenz liegen ab und lässt tiefe Frequenzen ungehindert passieren.
-\item Der Bandpass besitzt sowohl eine obere Grenzfrequenz, sodass Signale oberhalb besagter Frequenz gedämpft werden, als auch eine untere Grenzfrequenz, sodass Signale unterhalb dieser Frequenz gedämpft werden.
-\item Außerdem gibt es die Bandsperre, die Signale zwischen einer oberen und unteren Grenzfrequenz dämpft und alle weiteren Signale ungehindert passieren lässt.
+\item Der Hochpassfilter dämpft Signale, deren Frequenz unterhalb einer Grenzfrequenzliegen ab und lässt höhere Frequenzen ungehindert passieren.\cite{skript}
+\item Der Tiefpassfilter dämpft analog zum Hochpassfilter Signale, deren Frequenz oberhalb einer bestimmten Grenzfrequenz liegen ab und lässt tiefe Frequenzen ungehindert passieren.\cite{skript}
+\item Der Bandpass besitzt sowohl eine obere Grenzfrequenz, sodass Signale oberhalb besagter Frequenz gedämpft werden, als auch eine untere Grenzfrequenz, sodass Signale unterhalb dieser Frequenz gedämpft werden.\cite{skript}
+\item Außerdem gibt es die Bandsperre, die Signale zwischen einer oberen und unteren Grenzfrequenz dämpft und alle weiteren Signale ungehindert passieren lässt.\cite{skript}
 \end{itemize}
 Die Wirkungsweise all dieser Filter fußt auf folgenden Phänomenen:
 \begin{itemize}
 \item Der induktive Blindwiderstand eines Kondensators wächst proportional zur Frequenz der anliegenden Wechselspannung. ($X_{L}=\frac{1}{j*\omega+L}$) \cite{IBK}
 \item Der induktive Blindwiderstand einer Spule wächst proportional zur Frequenz der anliegenden Wechselspannung. ($\,X-_{L}=j*\omega+L$) \cite{IBS}
 \end{itemize}
+Zusätzlich wird zwischen aktiven und passiven Filtern unterschieden. Der passive Filter besteht nur aus passiven Bauteilen wie Kondensatoren, Widerständen und Induktivitäten und kann somit das Signal nicht verstärken, sondern nur unverändert durchlassen oder dämpfen. 
+Aktive Filter hingegen beinhalten auch aktive Bauteile wie zum Beispiel Transistoren oder Operationsverstärkern. Sie benötigen stets eine zusätzliche Stromversorgung und können das Signal zusätzlich zur Filterfunktion verstärken.
+Ein Filter besitzt außerdem eine Ordnung, welche die Amplitudenabnahme im Sperrbereich beschreibt. Ein Filter n-ter Ordnung besitzt eine Dämpfung von ca. $n*\si{20}{dB}$ pro Dekade. Ein Filter zweiter Ordnung lässt sich durch die Kombination von 2 Filtern erster  Ordnung realisieren. \cite{DSV}.
