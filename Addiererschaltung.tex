@@ -53,6 +53,7 @@ Zur Variation der Widerstände $R_{8}$ und $R_{10}$ wurde für diese Bauteile je
 \subsection{Ergebnisse}
 % A)Simulieren Sie für Werte von R1 = R2 = 0Ω ein Bodediagramm der Gesamtschaltung zwischen 100Hz und 10kHz.
 \subsubsection{Aufgabe A}
+\label{A}
 Simulation eines Bodediagramms der Gesamtschaltung zwischen $\si{100}{Hz}$ und $\si{10}{kHz}$.
 \newline $R_{8}$ und $R_{10}$ betragen hierbei $\si{0}{\Omega}$.
 \begin{figure}[h]
@@ -65,6 +66,7 @@ Simulation eines Bodediagramms der Gesamtschaltung zwischen $\si{100}{Hz}$ und $
 
 % C) Fügen Sie zwischen Tiefpass und Addierschaltung einen invertierenden Verstärker mit Verstärkungsfaktor 1 ein und wiederholen Sie die Simulation aus a). Was beobachten Sie nun? Wie nennt sich ein Filter, welches das beobachtete Übertragungsverhalten aufweist?
 \subsubsection{Aufgabe C}
+\label{C}
 Es wird ein invertierender Verstärkerr zwischen den Ausgang des Tiefpasses und der Addiererschaltung eingebaut. Die Simulation des Bodediagramms der Gesamtschaltung wird wiederholt. $R_{8}$ und $R_{10}$ betragen immernoch $\si{0}{\Omega}$.
 \begin{figure}[h]
 \includegraphics[width=14cm]{pics/BodeAd_mitInv}
@@ -74,19 +76,20 @@ Es wird ein invertierender Verstärkerr zwischen den Ausgang des Tiefpasses und 
 
 % D) Simulieren Sie weitere Bodediagramme der Gesamtschaltung für (R1 = 10kΩ, R2 = 90kΩ) und (R1 = 90kΩ, R2 = 10kΩ)
 \subsubsection{Aufgabe D}
+\label{D}
 Es werden weitere Bodediagramme simuliert. Nun werden die Werte für $R_{8}$ und $R_{10}$ entsprechend der Bildbeschriftung variiert.
 \begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=8cm]{pics/10_90}
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{10}{\Omega}$ und $R_{10}=\si{90}{\Omega}$}
+  \captionof{figure}{Bodediagramm für $R_{8}=\si{10}{\,k\Omega}$ und $R_{10}=\si{90}{\,k\Omega}$}
   \label{Bode1090}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=8cm]{pics/90_10}
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{90}{\Omega}$ und $R_{10}=\si{10}{\Omega}$}
+  \captionof{figure}{Bodediagramm für $R_{8}=\si{90}{\,k\Omega}$ und $R_{10}=\si{10}{\,k\Omega}$}
   \label{Bode9010}
 \end{subfigure}
 \caption{Bodediagramme für Gesamtschaltung mit variierten Bauteilwerten}
@@ -95,6 +98,7 @@ Es werden weitere Bodediagramme simuliert. Nun werden die Werte für $R_{8}$ und
 % E)Bauen Sie die Addierschaltung inklusive invertierendem Verstärker jetzt auch auf Ihrem Steckbrett auf. Verwenden Sie für die Widerstände R1 und R2 die beiden Potentiometer (0...100kΩ)desBauteilsortiments.FührenSieBodediagramm-Messungen derGesamtschaltung für R1 = R2 = 0Ω und bei ein paar weiteren Poti-Einstellungen durch.
 \newpage
 \subsubsection{Aufgabe E}
+\label{E}
 Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für $R_{8}$ und $R_{10}$ jeweils ein Potetiometer verbaut. Somit lassen sich die beiden Widerstände stufenlos zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ verändern. Es folgen sechs Bodediagramm-Messungen mit den angegebenen Bauteilwerten. In \textcolor{blue}{blau ist die Amplitude} und in \textcolor{red}{rot die Phase} aufgetragen. Ein exaktes Einstellen der Potentiometer ist nicht möglich, deshalb werden die Widerstände hier nur gerundet dargestellt.
 
 %Graphik 00 und 100 100
@@ -143,6 +147,7 @@ Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für
 % F)  Nun sollen zwei Sinussignale verschiedener Frequenz überlagert und auf den Eingang des Equalizers gegeben werden. Nutzen Sie zur Überlagerung die gleiche Schaltung wie in Abbildung 4, jedoch mit Kanal A und Kanal B des DAC an den beiden Enden des Spannungsteilers.ErzeugenSiemitdemSignalgeneratoranKanalAeineFrequenzvon ca. 250Hz. An Kanal B soll ein Sinus mit ca. 5kHz ausgegeben werden. Dies erreichen Sie, indem Sie einen Frequenzmultiplikator für Kanal B von 20 einstellen. Nehmen Sie mit dem Oszilloskop das Eingangssignal und die Ausgangssignale bei den beiden Extremstellungen auf (R1 = 0Ω, R2 = 100kΩ und umgekehrt).
 
 \subsubsection{Aufgabe F}
+\label{F}
 Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{5}{\,k\Omega}$ werden in die Steckbrettschaltung hinein geschickt. Nun wird das Eingangs- und Ausgangssignal jeweils für die Einstellungen $R_{8}=\si{0}{\Omega}$, $R_{10}=\si{100}{\,k\Omega}$ und $R_{8}=\si{100}{\,k\Omega}$, $R_{10}=\si{0}{\Omega}$ aufgezeichnet.
 
 \begin{figure}[h]
@@ -165,6 +170,25 @@ Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{
 
 
 \subsection{Diskussion}
+\subsubsection{Diskussion von Aufgabe A + B[\ref{A}]}
+Es werden die Signale des Hoch- und Tiefpassfilters addiert. Der Einschnitt in der Mitte, den man im ersten Moment durch die Addition von $2\cdot \si{-6}{dB}$ für erklärbar hält, ist bei genauerem Hinsehen mit $\si{40}{dB}$ dann doch etwas zu tief. Zusätzlich spielt hier nämlich noch eine zweite Begebenheit eine wichtige Rolle. Während der Tiefpassfilter zweiter Ordnung bei seiner Grenzfrequenz die Phase seines Signals um genau $\si{-90}{\deg}$ dreht, dreht der Hochpassfilter zweiter Ordnung die Phase seines Signals um $\si{+90}{\deg}$. Somit sind die zu addierenden Signale bei der Granzfrequenz genau um $\si{180}{\deg}$ phasenverschoben und heben sich gegenseitig auf. Dadurch entsteht der charakteristische Einschnitt in Abbildung \ref{bodeA}.
+
+\subsubsection{Diskussion von Aufgabe C [\ref{C}]}
+Um den ungewollten Einschnitt im Bodediagramm der Aufgabe A [\ref{A}] zu vermeiden, wird nun ein invertierender Verstärker mit einer Verstärkung von 1 zwischen den Tiefpassfilter und die Addiererschaltung gesetzt. Dieser Verstärkt das Signal nicht, sondern hat lediglich die Aufgabe die Phase des Tiefpasssignals um $\si{180}{\deg}$ zu drehen. Addiert man nun die beiden Signale auf Hochpassfilter und invertierendem Verstärker zusammen, so erhält man das Bodediagramm auf Abbildung \ref{bodeC}.
+Dieses Vermittelt zuerst den Eindruck die Gesamtschaltung würde jetzt eine Art Bandpass-Charakteristik haben. Ein Blick auf die Skala des Diagramms \ref{bodeC} verrät allerdings, dass hier nur eine minimale Dämpfung vorliegt. Die folgende Abbildung zeigt deutlich,
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=16cm]{pics/Bode_vergleich}
+\caption{Bodediagramm für \textcolor{blue}{Ausgangssignal}, \textcolor{green}{Tiefpasssignal}, \textcolor{red}{Hochpasssignal}}
+\label{vergleich}
+\end{figure}
+
+dass die in Abbildung \ref{bodeC} gezeigten Dämpfungen in Relation zur Dämpfung, die am Hochpass- und Tiefpassfilter vorliegt, zu vernachlässigen sind.
+\subsubsection{Diskussion von Aufgabe D [\ref{D}]}
+Die beiden in LT Spice simulierten Kurven \ref{Bode1090} und \ref{Bode9010} zeigen wie der 2 Band Equalizer eingesetzt wird. Mit verscheiden großen Widerständen vor dem Hochpass- und Tiefpasseingang des Addierer wird das Mischverhältnis des beiden Signale bestimmt. Für die Simulation in Abbildung \ref{Bode1090} wurde das Signal kommend vom Tiefpassfilter mit einem deutlich höheren Widerstand ($\si{90}{\,k \Omega}$) gehemmt als jenes, welches vom Hochpass kommt ($\si{10}{\,k\Omega}$). Für die Zweite Simulation (\ref{Bode9010}) wurden die Werte von $R_{8}$ und $R_{10}$ lediglich vertauscht. Entsprechend ist der Verlauf der Amplitude hier symmetrisch zum Verlauf der ersten Kurve.\newline Das Verhältnis von hochfrequenten und niederfrequenten Signalanteilen lässt sich also über diese simple Einstellung der Widerstände einstellen.
+\subsubsection{Diskussion von Aufgabe E [\ref{E}]}
+\subsubsection{Diskussion von Aufgabe F [\ref{F}]}
 
 
 
