@@ -65,8 +65,60 @@ Auch hier gehen wir analog zum Tiefpass vor um die Übertragungsfunktion zu erha
 \frac{U_{a}}{U_{e}}&=\,\frac{R^2}{2Z_{C}R+R^2+Z_{C}^2}\,=\,\frac{R^2}{\frac{2R}{j\omega C}+R^2-\frac{1}{\omega^2 C^2}}\\
 &=\, \frac{-\omega^2 R^2 C^2}{2R\omega C-\omega^2 R^2 C^2+1}
 \end{align*} 
+Die von uns gebauten Filter-Schaltungen auf dem Steckbrett sind in folgenden Abbildungen zu sehen:
+
+\begin{figure}[H]
+	\subfigure[Hochpass]{\includegraphics[width=0.45\textwidth]{pics/Hochpass aufgebaut.jpg}}
+	\quad
+  	\subfigure[Tiefpass]{\includegraphics[width=0.45\textwidth]{pics/Tiefpass aufgebaut.jpg}}
+  	\caption{Aufbau Hoch- und Tiefpass}  	
+  	\label{Aufbau Hoch- und Tiefpass}
+\end{figure}
+
 \subsection{Ergebnisse}
+Um die korrekte Funktionsweise unserer auf dem Steckbrett gebauten Filterschaltungen nachzuweisen, wird ein sinusförmiges Eingangssignal verschiedener Frequenzen auf die Schaltungsteile gegeben. Vergleicht man das vom TI-Board erzeugte Signal mit dem Ausgangssignal des jeweiligen Passes, lässt sich dessen Funktionsweise analysieren.\\
+\begin{figure}[H]
+	\centering
+	\subfigure[Hochpass bei tiefen Frequenzen]{\includegraphics[width=0.49\textwidth]{pics/Hochpass 1,65V 20,6Hz Zeitbereich 32ms.PNG}}
+	 \subfigure[Hochpass bei hohen Frequenzen]{\includegraphics[width=0.49\textwidth]{pics/Hochpass 1,65V 10,3kHz Zeitbereich 0,5ms.PNG}}
+  	\subfigure[Hochpass bei $\approx$1\si{\kilo\hertz}]{\includegraphics[width=0.49\textwidth]{pics/Hochpass 1,65V 1,04kHz Zeitbereich 4ms.PNG}}
+  	\caption{Messungen des Hochpass mit Oszilloskop}  
+  	\label{Hochpass Messung} 	
+\end{figure}
+In Bild (c) der Abbildung~\ref{Hochpass Messung} ist das Ausgangssignal, hier in Rot dargestellt, annähernd gleich dem Eingangssignal (blau). Gemessen wird hier bei einer Eingangsfrequenz von ~10\si{\kilo\hertz}. Bei niedrigen Frequenzen ist die Amplitude beim Ausgangssignal viel kleiner, also gedämpfter, als beim Eingangssignal. Dies ist in Bild (a) zu sehen. Bei einer Eingangsfrequenz von 20\si{hertz} ist die Amplitude des Ausgangssignals nahe Null. Der Hochpass erfüllt demnach seine Aufgabe des dämpfens niedriger Frequenzen. Bei der Grenzfrequenz beträgt die Amplitude des Ausgangssignals in etwa die Hälfte des Eingangssignals und ist um 90$^\circ$ phasenverschoben.\\
+\\
+Der Tiefpass funktioniert fungiert dem Hochpass gegenteilig. So lässt dieser niedrige Frequenzen nahezu eins zu eins durch. Zu sehen ist die in Bild (a) der Abbildung~\ref{Tiefpass Messung}, da hier die Linien des Eingangssignals (blau) und des Ausgangssignals (rot) in etwa die selbe Kurve beschreiben. Bei hohen Frequenzen (Bild (b)) ist das Ausgangssignal so verringert, dass kein Sinusverhalten zu erkennen ist. Beim Tiefpass wurden ebenfalls die Frequenzen 20\si{\hertz} und 10\si{\kilo\hertz} verwendet. Bei der Grenzfrequenz beträgt die Amplitude ebenfalls in etwa die Hälfte der Eingangsamplitude, die Phasenverschiebung beträgt -90$^\circ$.
+\begin{figure}[H]
+	\subfigure[Tiefpass bei tiefen Frequenzen]{\includegraphics[width=0.49\textwidth]{pics/Tiefpass 1,65V 20,6Hz Zeitbereich 32ms.PNG}}
+	 \subfigure[Tiefpass bei hohen Frequenzen]{\includegraphics[width=0.49\textwidth]{pics/Tiefpass 1,65V 10,3kHz Zeitbereich 0,5ms.PNG}}
+  	\subfigure[Tiefpass bei $\approx$1\si{\kilo\hertz}]{\includegraphics[width=0.49\textwidth]{pics/Tiefpass 1,65V 1,04kHz Zeitbereich 4ms.PNG}}
+  	\caption{Messungen des Tiefpass mit Oszilloskop}  
+  	\label{Tiefpass Messung} 	
+\end{figure}
+Die folgenden Diagramme stellen die simulierten Bode-Diagramme in LTSpice dar.
+Hierbei zeigt die durchgezogenen Linie die Dämpfung in dB und die gestichelte Linie die Phase in Grad an.
+\begin{figure}[H]
+\subfigure[Bode-Diagramm des Hochpasses]{\includegraphics[width=0.49\textwidth]{pics/BodeSimHochpass.PNG}}
+\subfigure[Bode-Diagramm des Tiefpasses]{\includegraphics[width=0.49\textwidth]{pics/BodeSimTiefpass.PNG}}
+\caption{Bode-Diagramme der Filter in LTSpice simuliert}
+\label{Bode Spice}
+\end{figure}
+Durch messen der realen Schaltungen der Pässe auf dem Steckbrett erhält man folgende Bode-Diagramme. Die Messung wurde mittels der im Programm LENlab integrierten Frequenzanalyse durchgeführt.
+\begin{figure}[H]
+\subfigure[Bode-Diagramm des Hochpasses]{\includegraphics[width=0.49\textwidth]{pics/BodeHochpass.PNG}}
+\subfigure[Bode-Diagramm des Tiefpasses]{\includegraphics[width=0.49\textwidth]{pics/BodeTiefpass.PNG}}
+\caption{Bode-Diagramme der Filter}
+\label{Bode LENlab}
+\end{figure}
 
 \subsection{Diskussion}
-
+Die Kurvenverläufe respektiven Bode-Diagramme stimmen mit den Simulationen maßgeblich überein. Ungenauigkeit gibt es zum Beispiel beim Sperrbereich des Tiefpass-Filters, dessen Kurve die -40\si{\dB} nicht gänzlich erreicht. Dies lässt sich jedoch auf kleiner Schwankungen oder Messungenauigkeiten zurückführen. Im Allgemeinen haben beide Filter eine Dämpfung im Sperrbereich von $\approx$-40\si{\dB}. Dieser Wert lässt sich sowohl aus der Simulation wie auch aus der Messung ziehen und bestätigt, dass es sich um Filter 2ter Ordnung handelt.\\
+\\
+Die größte Verstärkung ist bei den Simulierten Diagrammen bei 0\si{\dB}. Somit haben wir den gewollten Verstärkungsfaktor von 1 im Durchlassbereich. Dies zeigt sich auch in den Diagrammen der realen Messungen, wobei sich die Kurve des Hochpasses glatt der Null nähert und die Kurve des Tiefpasses bei niedrigen Frequenzen sogar kurzzeitig über die 0dB Grenze springt. Dieses Verhalten entsteht durch Messungenauigkeiten bei niedrigen Frequenzen.\\
+\\
+Diese zeigen sich auch bei der gemessenen Kurve der Phasenverschiebung des Hochpasses. Insgesamt zeigen die gemessenen Diagramme die erwartet Änderung der Phasenverschiebung von $\pm 180^\circ$ besser als die Simulation. Dies stellen die Bilder aus Abbildung~\ref{Hochpass Messung} und \ref{Tiefpass Messung} recht gut dar. Zwischen 100\si{\hertz} und der Grenzfrequenz ändert sich die Phase um 90$^\circ$ und von der Grenzfrequenz bis 10\si{\kilo\hertz} nochmals um 90$^\circ$. So liegen die jeweiligen Kurven von Abbildung~\ref{Hochpass Messung} (b) und die von Abbildung~\ref{Tiefpass Messung} (a) aufeinander, d.h. Ausgangsspannung und Eingangsspannung sind Phasengleich. Hierbei gibt es im Graphen des Tiefpassfilters eine Besonderheit. Der Sprung kurz vor der Frequenz 10\si{\kilo\hertz} kommt daher, dass LENlab das Ende der zyklischen Skala erreicht und bei $\pm 180^\circ$ entweder 360$^\circ$ abzieht oder hinzufügt.\\
+\\
+Bei der Simulation liegt die Grenzfrequenz genau bei den vorhergesagten -6dB (Filter 2. Ordnung). Bestimmt man allerdings im Bode-Diagramm des Tiefpass-Filters die Frequenz bei -6dB, so liegt diese leicht über 1\si{\kilo\hertz}. Dies liegt and Schwankungen in der Messdurchführung. Würde man die Kurve glätten würde man die vorhergesagte Grenzfrequenz treffen.\\
+\\
+Abschließend lässt sich festhalten, dass die Eigenschaften der Filter den Anforderungen der Aufgabenstellung gerecht werden. Der Tiefpass die tiefen Frequenzen durch und dämpft die hohen. Analog dämpft der Hochpass die tiefen Frequenzen und lässt die hohen durch. Beide Filter verstärken im Durchlassbereich um den Faktor 1 und die Grenzfrequenz liegt bei 1\si{\kilo\hertz}. Dies zeigt sowohl die LTSpice Simulation der Schaltung wie auch die Messungen in mit Steckbrett und LENlab. Somit können beide Filter für die nächste Problemstelle, das zusammenführen der Ausgangssignale mittels einer Addiererschaltung, verwendet werden. 
 
