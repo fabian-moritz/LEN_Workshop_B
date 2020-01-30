@@ -2,13 +2,6 @@
 Nun wird eine Addiererschaltung entsprechend einer vorgegebenen Übertragungsfunktion aufgebaut. Anschließend wird experimentiert, welchen Einfluss die verschiedenen Bauteilwerte innerhalb des invertierenden Addierers und des invertierenden Verstärkers auf das Ausgangssignal haben.
 
 \subsection{Methoden}
-
-%\begin{figure}[h]
-%\includegraphics[width=10cm]{pics/Addierer}
-%\caption{Beispiel Addiererschaltung \cite{Addierer}}
-%\label{Addierer}
-%\end{figure}
-
 Nach den Vorgaben der Aufgabenstellung und den goldenen Regeln für den Operationsverstärker \cite{skript} gilt für den invertierenden Addierer:
 \begin{equation}
 U_{a}=-\,{\frac {10k\Omega }{10\,k\Omega +R_{8}}}\cdot\,U_{H}-\,{\frac {10k
@@ -32,18 +25,12 @@ Außerdem war es ebenfalls Teil der Aufgabe die Schaltung auf dem Breadbord nach
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=6cm]{pics/Invertierer_aufgebaut.jpg}
-  \captionof{figure}{}
-  \label{invV}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
+\subfigure[]{
+    \includegraphics[width=6cm]{pics/Invertierer_aufgebaut.jpg}
+  \label{invV}}
+\subfigure[]{
   \includegraphics[width=4cm]{pics/Addierer_aufgebaut.jpg}
-  \captionof{figure}{}
-  \label{invA}
-\end{subfigure}
+  \label{invA}}
 \caption{Invertierender Verstärker (a) und Invertierender Addierer (b)}
 \end{figure}
 
@@ -79,21 +66,12 @@ Es wird ein invertierender Verstärkerr zwischen den Ausgang des Tiefpasses und 
 \label{D}
 Es werden weitere Bodediagramme simuliert. Nun werden die Werte für $R_{8}$ und $R_{10}$ entsprechend der Bildbeschriftung variiert.
 \begin{figure}[h]
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=8cm]{pics/10_90}
-  \centering  
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{10}{\,k\Omega}$ und \newline $R_{10}=\si{90}{\,k\Omega}$}
-  \label{Bode1090}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=8cm]{pics/90_10}
-  \centering
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{90}{\,k\Omega}$ und \newline $R_{10}=\si{10}{\,k\Omega}$}
-  \label{Bode9010}
-\end{subfigure}
+\subfigure[Bodediagramm für $R_{8}=\si{10}{\,k\Omega}$ und \newline $R_{10}=\si{90}{\,k\Omega}$]{
+  \includegraphics[width=0.48\textwidth]{pics/10_90}
+  \label{Bode1090}}
+\subfigure[Bodediagramm für $R_{8}=\si{90}{\,k\Omega}$ und \newline $R_{10}=\si{10}{\,k\Omega}$]{
+  \includegraphics[width=0.48\textwidth]{pics/90_10}
+  \label{Bode9010}}
 \caption{Bodediagramme für Gesamtschaltung mit variierten Bauteilwerten}
 \end{figure}
 
@@ -105,43 +83,24 @@ Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
+\subfigure[Bodediagramm für $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{0}{\Omega}$]{
   \includegraphics[width=8cm]{pics/0_0Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{0}{\Omega}$}
-  \label{0_0SB}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
+  \label{0_0SB}}%
+\subfigure[Bodediagramm für $R_{8}\approx \si{100}{\,k\Omega}$,$R_{10}\approx \si{100}{\,k\Omega}$]{
   \includegraphics[width=8cm]{pics/100_100Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{100}{\,k\Omega}$,$R_{10}\approx \si{100}{\,k\Omega}$}
-  \label{1_1SB}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
+  \label{1_1SB}}
+\subfigure[Bodediagramm für $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{100}{\,k\Omega}$]{
   \includegraphics[width=8cm]{pics/0_100Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{100}{\,k\Omega}$}
-  \label{0_1SB}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
+  \label{0_1SB}}%
+\subfigure[Bodediagramm für $R_{8}\approx \si{100}{\,k\Omega}$, $R_{10}\approx \si{0}{\Omega}$]{
   \includegraphics[width=8cm]{pics/100_0Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{100}{\,k\Omega}$, $R_{10}\approx \si{0}{\Omega}$}
-  \label{1_0SB}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
+  \label{1_0SB}}
+\subfigure[Bodediagramm für $R_{8}\approx \si{30}{\,k\Omega}$, $R_{10}\approx \si{60}{\,k\Omega}$]{
   \includegraphics[width=8cm]{pics/30_60Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{30}{\,k\Omega}$, $R_{10}\approx \si{60}{\,k\Omega}$}
-  \label{3_6SB}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
+  \label{3_6SB}}%
+\subfigure[Bodediagramm für $R_{8}\approx \si{60}{\,k\Omega}$, $R_{10}\approx \si{30}{\,k\Omega}$]{
   \includegraphics[width=8cm]{pics/60_30Steckbrett}
-  \captionof{figure}{Bodediagramm für $R_{8}\approx \si{60}{\,k\Omega}$, $R_{10}\approx \si{30}{\,k\Omega}$}
-  \label{6_3SB}
-\end{subfigure}
-
+  \label{6_3SB}}
 \caption{Bodediagramme für Gesamtschaltung mit Potentiometer von $R_{8}$ und $R_{10}$}
 \end{figure}
 \newpage
@@ -153,18 +112,12 @@ Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{1\textwidth}
-\centering
+\subfigure[Oszilloskop für $R_{8}=\si{0}{\Omega}$ und $R_{10}=\si{100}{\,k\Omega}$]{
   \includegraphics[width=17cm]{pics/3.3f_0_100}
-  \captionof{figure}{Oszilloskop für $R_{8}=\si{0}{\Omega}$ und $R_{10}=\si{100}{\,k\Omega}$}
-  \label{sin0_1}
-\end{subfigure}
-\begin{subfigure}{1\textwidth}
-\centering
+  \label{sin0_1}}
+\subfigure[Oszilloskop für $R_{8}=\si{100}{\,k\Omega}$ und $R_{10}=\si{0}{\Omega}$]{
   \includegraphics[width=17cm]{pics/3.3f_100_0}
-  \captionof{figure}{Oszilloskop für $R_{8}=\si{100}{\,k\Omega}$ und $R_{10}=\si{0}{\Omega}$}
-  \label{sin1_0}
-\end{subfigure}
+  \label{sin1_0}}
 \caption{Oszilloskop für Sinussignal}
 \end{figure}
 
@@ -172,27 +125,28 @@ Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{
 \newpage
 \subsection{Diskussion}
 \subsubsection{Diskussion von Aufgabe A + B[\ref{A}]}
-Es werden die Signale des Hoch- und Tiefpassfilters addiert. Der Einschnitt in der Mitte, den man im ersten Moment durch die Addition von $2\cdot \si{-6}{dB}$ (Filter 2. Ordnung bei Grenzfrequenz) für erklärbar hält, ist bei genauerem Hinsehen mit $\si{40}{dB}$ dann doch etwas zu tief. Zusätzlich spielt hier nämlich noch eine zweite Begebenheit eine wichtige Rolle. Während der Tiefpassfilter zweiter Ordnung bei seiner Grenzfrequenz die Phase seines Signals um genau $\si{-90}{^{\circ}}$ dreht, dreht der Hochpassfilter zweiter Ordnung die Phase seines Signals um $\si{+90}{^{\circ}}$. Somit sind die zu addierenden Signale bei der Granzfrequenz genau um $\si{180}{^{\circ}}$ phasenverschoben und heben sich gegenseitig auf. Dadurch entsteht der charakteristische Einschnitt in Abbildung \ref{bodeA}.
+Es werden die Signale des Hoch- und Tiefpassfilters addiert. Der Einschnitt in der Mitte, den man im ersten Moment durch die Addition von $2\cdot \si{-6}{dB}$ (Filter 2. Ordnung bei Grenzfrequenz) für erklärbar hält, ist bei genauerem Hinsehen mit $\si{45}{dB}$ dann doch etwas zu tief. Zusätzlich spielt hier nämlich noch eine zweite Begebenheit eine wichtige Rolle. Während der Tiefpassfilter zweiter Ordnung die Phase seines Signals um genau $\si{-90}{^{\circ}}$ dreht, dreht der Hochpassfilter zweiter Ordnung die Phase seines Signals um $\si{+90}{^{\circ}}$. Somit sind die zu addierenden Signale genau um $\si{180}{^{\circ}}$ phasenverschoben. Unterscheiden sich die Amplituden der phasenverschobenen Signale deutlich, so fällt diese destruktive Interferenz kaum ins Gewicht. An der Grenzfrequenz betragen die Amplituden aber beide ca.$\si{-6}{dB}$. Deshalb heben sich die beiden Signale an der Grenzfrequenz gegenseitig komplett auf. Dadurch entsteht der charakteristische Einschnitt in Abbildung \ref{bodeA}.
 
 \subsubsection{Diskussion von Aufgabe C [\ref{C}]}
 Um den ungewollten Einschnitt im Bodediagramm der Aufgabe A [\ref{A}] zu vermeiden, wird nun ein invertierender Verstärker mit einer Verstärkung von 1 zwischen den Tiefpassfilter und die Addiererschaltung gesetzt. Dieser Verstärkt das Signal nicht, sondern hat lediglich die Aufgabe die Phase des Tiefpasssignals um $\si{180}{^{\circ}}$ zu drehen. Addiert man nun die beiden Signale von Hochpassfilter und invertierendem Verstärker zusammen, so erhält man das Bodediagramm auf Abbildung \ref{bodeC}.
-Dieses Vermittelt zuerst den Eindruck die Gesamtschaltung würde jetzt eine Art Bandpass-Charakteristik haben. Ein Blick auf die Skala des Diagramms \ref{bodeC} verrät allerdings, dass hier nur eine minimale Dämpfung vorliegt. Die folgende Abbildung zeigt deutlich,
+Dieses vermittelt zuerst den Eindruck die Gesamtschaltung würde jetzt eine Art Bandpass-Charakteristik haben. Die Skala des Diagramms \ref{bodeC} verrät allerdings, dass hier nur eine minimale Dämpfung vorliegt. Die folgende Abbildung zeigt deutlich,
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=16cm]{pics/Bode_vergleich}
+\includegraphics[width=13cm]{pics/Bode_vergleich}
 \caption{Bodediagramm für \textcolor{blue}{Ausgangssignal}, \textcolor{green}{Tiefpasssignal}, \textcolor{red}{Hochpasssignal}}
 \label{vergleich}
 \end{figure}
 
 dass die in Abbildung \ref{bodeC} gezeigten Dämpfungen in Relation zur Dämpfung, die am Hochpass- und Tiefpassfilter vorliegt, zu vernachlässigen sind.
+\newpage
 \subsubsection{Diskussion von Aufgabe D [\ref{D}]}
 \label{DiskussionD}
 Die beiden in LT Spice simulierten Kurven \ref{Bode1090} und \ref{Bode9010} zeigen wie der 2 Band Equalizer eingesetzt wird. Mit verscheiden großen Widerständen vor dem Hochpass- und Tiefpasseingang des Addierer wird das Mischverhältnis des beiden Signale bestimmt. Für die Simulation in Abbildung \ref{Bode1090} wurde das Signal kommend vom Tiefpassfilter mit einem deutlich höheren Widerstand ($\si{90}{\,k \Omega}$) gehemmt als jenes, welches vom Hochpass kommt ($\si{10}{\,k\Omega}$). Für die Zweite Simulation (\ref{Bode9010}) wurden die Werte von $R_{8}$ und $R_{10}$ lediglich vertauscht. Entsprechend ist der Verlauf der Amplitude hier symmetrisch zum Verlauf der ersten Kurve.\newline Das Verhältnis von hochfrequenten und niederfrequenten Signalanteilen lässt sich also über diese simple Einstellung der Widerstände einstellen.
 
 \subsubsection{Diskussion von Aufgabe E [\ref{E}]}
-Um die in \ref{DiskussionD} angesprochene Anpassung der Widerstände auf dem Steckbrett zu realisieren wurden Potentiometer verbaut. Somit ist eine stufenlose Einstellung von $R_{8}$ und $R_{10}$ zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ möglich. Die sechs Bodedigramme aus Kapitel \ref{E} zeigen, dass die Bestimmmung des Mischverhältnisses nicht nur in der Simulation funktioniert. Abbildung \ref{0_0SB} zeigt das Mischverhältnis bei $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{0}{\Omega}$. Die Amplitude sollte somit konstant sein. \textcolor{red}{Leider schwankt der Verlauf bei den Frequenzen $\si{<1000}{Hz}$ stark. Dies kann auf Messungenauigkeiten bei niedrigen Frequenzen zurückgeführt werden.}
-In Abbildung \ref{1_1SB} ist zu beobachten, dass bei $R_{8}\approx \si{100}{\,k\Omega}$, $R_{10}\approx \si{100}{\,k\Omega}$ die Amplitude, wie es auch in der Simulation der Fall ist, konstant niedrig bleibt. Hoch- und Tiefpasssignal werden also gleichermaßen durch die Widerstände gehemmt, sodass ein Verhältnis von 1 vorliegt.
+Um die in \ref{DiskussionD} angesprochene Anpassung der Widerstände auf dem Steckbrett zu realisieren wurden Potentiometer verbaut. Somit ist eine stufenlose Einstellung von $R_{8}$ und $R_{10}$ zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ möglich. Die sechs Bodedigramme aus Kapitel \ref{E} zeigen, dass die Bestimmmung des Mischverhältnisses nicht nur in der Simulation funktioniert. Abbildung \ref{0_0SB} zeigt das Mischverhältnis bei $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{0}{\Omega}$. Die Amplitude sollte somit konstant sein. Die Skala des Bodediagramms \ref{0_0SB} zeigt, dass die zu beobachtenden Schwankungen sich nur im Bereich $\si{-1}{-}{+0,5}{dB}$ abspielen und somit zu vernachlässigen sind.
+In Abbildung \ref{1_1SB} ist zu beobachten, dass bei $R_{8}\approx \si{100}{\,k\Omega}$, $R_{10}\approx \si{100}{\,k\Omega}$ die Amplitude, wie es auch in der Simulation der Fall ist, konstant niedrig bleibt. Hoch- und Tiefpasssignal werden also gleichermaßen durch die Widerstände gehemmt. Unabhängig vom Wert der Widerstände gilt: Solange $R_{8}$ und $R_{10}$ gleich sind beträgt das Verhältnis zwischen Hoch- und Tiefpasssignal 1.
 Bei der Betrachtung von Abbildung \ref{0_1SB} und \ref{1_0SB} fällt sofort die Symmetrie der beiden Amplitudenverläufe ins Auge. Während in \ref{0_1SB} das Tiefpasssignal durch den Widerstand gehemmt wird und somit das Hochpasssignal überwiegt, wird in \ref{1_0SB} das Hochpasssignal gehemmt und somit überwiegt das Tiefpasssignal.
 Genau so ist auch der Verlauf in \ref{3_6SB} und \ref{6_3SB} zu erklären. Nur wurden hier jeweils ca. $\si{30}{\Omega}$ und $\si{60}{\Omega}$ verwendet somit ist das Mischverhältnis nicht mehr so einseitig und der Verlauf der Kurve fällt etwas flacher aus.
 
