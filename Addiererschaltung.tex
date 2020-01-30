@@ -186,10 +186,22 @@ Dieses Vermittelt zuerst den Eindruck die Gesamtschaltung würde jetzt eine Art 
 
 dass die in Abbildung \ref{bodeC} gezeigten Dämpfungen in Relation zur Dämpfung, die am Hochpass- und Tiefpassfilter vorliegt, zu vernachlässigen sind.
 \subsubsection{Diskussion von Aufgabe D [\ref{D}]}
+\label{DiskussionD}
 Die beiden in LT Spice simulierten Kurven \ref{Bode1090} und \ref{Bode9010} zeigen wie der 2 Band Equalizer eingesetzt wird. Mit verscheiden großen Widerständen vor dem Hochpass- und Tiefpasseingang des Addierer wird das Mischverhältnis des beiden Signale bestimmt. Für die Simulation in Abbildung \ref{Bode1090} wurde das Signal kommend vom Tiefpassfilter mit einem deutlich höheren Widerstand ($\si{90}{\,k \Omega}$) gehemmt als jenes, welches vom Hochpass kommt ($\si{10}{\,k\Omega}$). Für die Zweite Simulation (\ref{Bode9010}) wurden die Werte von $R_{8}$ und $R_{10}$ lediglich vertauscht. Entsprechend ist der Verlauf der Amplitude hier symmetrisch zum Verlauf der ersten Kurve.\newline Das Verhältnis von hochfrequenten und niederfrequenten Signalanteilen lässt sich also über diese simple Einstellung der Widerstände einstellen.
-\subsubsection{Diskussion von Aufgabe E [\ref{E}]}
-\subsubsection{Diskussion von Aufgabe F [\ref{F}]}
 
+\subsubsection{Diskussion von Aufgabe E [\ref{E}]}
+Um die in \ref{DiskussionD} angesprochene Anpassung der Widerstände auf dem Steckbrett zu realisieren wurden Potentiometer verbaut. Somit ist eine stufenlose Einstellung von $R_{8}$ und $R_{10}$ zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ möglich. Die sechs Bodedigramme aus Kapitel \ref{E} zeigen, dass die Bestimmmung des Mischverhältnisses nicht nur in der Simulation funktioniert. Abbildung \ref{0_0SB} zeigt das Mischverhältnis bei $R_{8}\approx \si{0}{\Omega}$, $R_{10}\approx \si{0}{\Omega}$. Die Amplitude sollte somit konstant sein. \textcolor{red}{Leider schwankt der Verlauf bei den Frequenzen $\si{<1000}{Hz}$ stark. Dies kann auf Messungenauigkeiten bei niedrigen Frequenzen zurückgeführt werden.}
+In Abbildung \ref{1_1SB} ist zu beobachten, dass bei $R_{8}\approx \si{100}{\,k\Omega}$, $R_{10}\approx \si{100}{\,k\Omega}$ die Amplitude, wie es auch in der Simulation der Fall ist, konstant niedrig bleibt. Hoch- und Tiefpasssignal werden also gleichermaßen durch die Widerstände gehemmt, sodass ein Verhältnis von 1 vorliegt.
+Bei der Betrachtung von Abbildung \ref{0_1SB} und \ref{1_0SB} fällt sofort die Symmetrie der beiden Amplitudenverläufe ins Auge. Während in \ref{0_1SB} das Tiefpasssignal durch den Widerstand gehemmt wird und somit das Hochpasssignal überwiegt, wird in \ref{1_0SB} das Hochpasssignal gehemmt und somit überwiegt das Tiefpasssignal.
+Genau so ist auch der Verlauf in \ref{3_6SB} und \ref{6_3SB} zu erklären. Nur wurden hier jeweils ca. $\si{30}{\Omega}$ und $\si{60}{\Omega}$ verwendet somit ist das Mischverhältnis nicht mehr so einseitig und der Verlauf der Kurve fällt etwas flacher aus.
+
+\subsubsection{Diskussion von Aufgabe F [\ref{F}]}
+Die Graphen des Kapitels \ref{F} zeigen Sinuskurven auf einem Oszilloskop. In \textcolor{blue}{blau ist das Eingangssignal} aufgezeichnet, in \textcolor{red}{rot das Ausgangssignal}.
+Die Abbildung \ref{sin0_1} aus \ref{F} zeigt wie bei einem hochpasslastigen Mischverhältnis der Hochfrequente Signalanteil des Sinussignals überwiegt.
+In Abbildung \ref{sin1_0} dagegen überwiegt das niederfrequente Signal, da hier das Mischverhältnis der Widerstände $R_{8}$ und $R_{10}$ zugunsten des Tiefpasssignals eingestellt ist.
+
+\subsubsection{Fazit}
+Die Addiereschaltung ermöglicht es uns Signale, wie wir selbst erleben durften mit einfachsten Bauteilen, in ein gewünschtes Verhältnis zu setzen. Wichtig ist es dabei immer die Phasenverschiebung der zu addierenden Signale zu beachten, da es sonst im Extremfall dazu kommt, dass die beiden sich komplett gegenseitig aufheben. In unserer Schaltung wurde ein invertierender Addierer gebaut. Ebenso wäre es möglich einen nichtinvertierenden Addierer zu verbauen. Die Differenzen zwischen Simulation und der Messung der Steckbrettschaltung fielen relativ gering aus.
 
 
 
