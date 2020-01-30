@@ -18,7 +18,7 @@ Dies bedeutet (bezogen auf Abbildung \ref{spicegesamt}):
 \begin{equation}
 R_{11}=R_{7}=R_{9}=10\si{k\Omega}
 \end{equation}
-Das Bauteilwerte der Wiederstände $R_{8} und  R_{10}$ werden später noch verändert.
+Das Bauteilwerte der Wiederstände $R_{8}$ und  $R_{10}$ werden später noch verändert.
 Dementsprechend wurde nun erstmals die gesamte Schaltung in Spice aufgebaut.\newline
 
 \begin{figure}[h]
@@ -48,7 +48,7 @@ Außerdem war es ebenfalls Teil der Aufgabe die Schaltung auf dem Breadbord nach
 \end{figure}
 
 Zur Variation der Widerstände $R_{8}$ und $R_{10}$ wurde für diese Bauteile jeweils ein \newline Potentiometer($\sim 0-100k\Omega$) verbaut, wie es in Abbildung \ref{invA} zu sehen ist.
-\newline Sowohl mit dem Schaltungsaufbau in Spice als auch mit der auf dem Breadboard werden Messungen durchgeführt. Deren Ergebnisse im folgenden vorgestellt werden.
+\newline Sowohl mit dem Schaltungsaufbau in Spice als auch mit der auf dem Breadboard werden Messungen durchgeführt. Deren Ergebnisse im Folgenden vorgestellt werden.
 
 \subsection{Ergebnisse}
 % A)Simulieren Sie für Werte von R1 = R2 = 0Ω ein Bodediagramm der Gesamtschaltung zwischen 100Hz und 10kHz.
@@ -83,13 +83,15 @@ Es werden weitere Bodediagramme simuliert. Nun werden die Werte für $R_{8}$ und
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=8cm]{pics/10_90}
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{10}{\,k\Omega}$ und $R_{10}=\si{90}{\,k\Omega}$}
+  \centering  
+  \captionof{figure}{Bodediagramm für $R_{8}=\si{10}{\,k\Omega}$ und \newline $R_{10}=\si{90}{\,k\Omega}$}
   \label{Bode1090}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=8cm]{pics/90_10}
-  \captionof{figure}{Bodediagramm für $R_{8}=\si{90}{\,k\Omega}$ und $R_{10}=\si{10}{\,k\Omega}$}
+  \centering
+  \captionof{figure}{Bodediagramm für $R_{8}=\si{90}{\,k\Omega}$ und \newline $R_{10}=\si{10}{\,k\Omega}$}
   \label{Bode9010}
 \end{subfigure}
 \caption{Bodediagramme für Gesamtschaltung mit variierten Bauteilwerten}
@@ -99,9 +101,8 @@ Es werden weitere Bodediagramme simuliert. Nun werden die Werte für $R_{8}$ und
 \newpage
 \subsubsection{Aufgabe E}
 \label{E}
-Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für $R_{8}$ und $R_{10}$ jeweils ein Potetiometer verbaut. Somit lassen sich die beiden Widerstände stufenlos zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ verändern. Es folgen sechs Bodediagramm-Messungen mit den angegebenen Bauteilwerten. In \textcolor{blue}{blau ist die Amplitude} und in \textcolor{red}{rot die Phase} aufgetragen. Ein exaktes Einstellen der Potentiometer ist nicht möglich, deshalb werden die Widerstände hier nur gerundet dargestellt.
+Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für $R_{8}$ und $R_{10}$ jeweils ein Potetiometer verbaut. Somit lassen sich die beiden Widerstände stufenlos zwischen $\si{0}{\Omega}$ und $\si{100}{k\Omega}$ verändern. Es folgen sechs Bodediagramm-Messungen mit den angegebenen Bauteilwerten. In \textcolor{blue}{blau ist die Amplitude} und in \textcolor{red}{rot die Phase} aufgetragen. Ein exaktes Einstellen der Potentiometer ist nicht möglich, deshalb werden die Widerstände hier nur gerundet angegeben.
 
-%Graphik 00 und 100 100
 \begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
@@ -148,7 +149,7 @@ Die gesamte Schaltung wurde nun auf dem Steckbrett aufgebaut. Hierbei wurde für
 
 \subsubsection{Aufgabe F}
 \label{F}
-Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{5}{\,k\Omega}$ werden in die Steckbrettschaltung hinein geschickt. Nun wird das Eingangs- und Ausgangssignal jeweils für die Einstellungen $R_{8}=\si{0}{\Omega}$, $R_{10}=\si{100}{\,k\Omega}$ und $R_{8}=\si{100}{\,k\Omega}$, $R_{10}=\si{0}{\Omega}$ aufgezeichnet.
+Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{5}{\,k\Omega}$ werden in die Steckbrettschaltung hinein geschickt. Es wird das \textcolor{blue}{Eingangssignal in blau} und das \textcolor{red}{Ausgangssignal in rot} jeweils für die Einstellungen $R_{8}=\si{0}{\Omega}$, $R_{10}=\si{100}{\,k\Omega}$ und $R_{8}=\si{100}{\,k\Omega}$, $R_{10}=\si{0}{\Omega}$ aufgezeichnet.
 
 \begin{figure}[h]
 \centering
@@ -168,13 +169,13 @@ Zwei sich überlagernde Sinussignale mit den Frequenzen $\si{250}{Hz}$ und $\si{
 \end{figure}
 
 
-
+\newpage
 \subsection{Diskussion}
 \subsubsection{Diskussion von Aufgabe A + B[\ref{A}]}
-Es werden die Signale des Hoch- und Tiefpassfilters addiert. Der Einschnitt in der Mitte, den man im ersten Moment durch die Addition von $2\cdot \si{-6}{dB}$ für erklärbar hält, ist bei genauerem Hinsehen mit $\si{40}{dB}$ dann doch etwas zu tief. Zusätzlich spielt hier nämlich noch eine zweite Begebenheit eine wichtige Rolle. Während der Tiefpassfilter zweiter Ordnung bei seiner Grenzfrequenz die Phase seines Signals um genau $\si{-90}{\deg}$ dreht, dreht der Hochpassfilter zweiter Ordnung die Phase seines Signals um $\si{+90}{\deg}$. Somit sind die zu addierenden Signale bei der Granzfrequenz genau um $\si{180}{\deg}$ phasenverschoben und heben sich gegenseitig auf. Dadurch entsteht der charakteristische Einschnitt in Abbildung \ref{bodeA}.
+Es werden die Signale des Hoch- und Tiefpassfilters addiert. Der Einschnitt in der Mitte, den man im ersten Moment durch die Addition von $2\cdot \si{-6}{dB}$ (Filter 2. Ordnung bei Grenzfrequenz) für erklärbar hält, ist bei genauerem Hinsehen mit $\si{40}{dB}$ dann doch etwas zu tief. Zusätzlich spielt hier nämlich noch eine zweite Begebenheit eine wichtige Rolle. Während der Tiefpassfilter zweiter Ordnung bei seiner Grenzfrequenz die Phase seines Signals um genau $\si{-90}{^{\circ}}$ dreht, dreht der Hochpassfilter zweiter Ordnung die Phase seines Signals um $\si{+90}{^{\circ}}$. Somit sind die zu addierenden Signale bei der Granzfrequenz genau um $\si{180}{^{\circ}}$ phasenverschoben und heben sich gegenseitig auf. Dadurch entsteht der charakteristische Einschnitt in Abbildung \ref{bodeA}.
 
 \subsubsection{Diskussion von Aufgabe C [\ref{C}]}
-Um den ungewollten Einschnitt im Bodediagramm der Aufgabe A [\ref{A}] zu vermeiden, wird nun ein invertierender Verstärker mit einer Verstärkung von 1 zwischen den Tiefpassfilter und die Addiererschaltung gesetzt. Dieser Verstärkt das Signal nicht, sondern hat lediglich die Aufgabe die Phase des Tiefpasssignals um $\si{180}{\deg}$ zu drehen. Addiert man nun die beiden Signale auf Hochpassfilter und invertierendem Verstärker zusammen, so erhält man das Bodediagramm auf Abbildung \ref{bodeC}.
+Um den ungewollten Einschnitt im Bodediagramm der Aufgabe A [\ref{A}] zu vermeiden, wird nun ein invertierender Verstärker mit einer Verstärkung von 1 zwischen den Tiefpassfilter und die Addiererschaltung gesetzt. Dieser Verstärkt das Signal nicht, sondern hat lediglich die Aufgabe die Phase des Tiefpasssignals um $\si{180}{^{\circ}}$ zu drehen. Addiert man nun die beiden Signale von Hochpassfilter und invertierendem Verstärker zusammen, so erhält man das Bodediagramm auf Abbildung \ref{bodeC}.
 Dieses Vermittelt zuerst den Eindruck die Gesamtschaltung würde jetzt eine Art Bandpass-Charakteristik haben. Ein Blick auf die Skala des Diagramms \ref{bodeC} verrät allerdings, dass hier nur eine minimale Dämpfung vorliegt. Die folgende Abbildung zeigt deutlich,
 
 \begin{figure}[h]
@@ -199,7 +200,7 @@ Genau so ist auch der Verlauf in \ref{3_6SB} und \ref{6_3SB} zu erklären. Nur w
 Die Graphen des Kapitels \ref{F} zeigen Sinuskurven auf einem Oszilloskop. In \textcolor{blue}{blau ist das Eingangssignal} aufgezeichnet, in \textcolor{red}{rot das Ausgangssignal}.
 Die Abbildung \ref{sin0_1} aus \ref{F} zeigt wie bei einem hochpasslastigen Mischverhältnis der Hochfrequente Signalanteil des Sinussignals überwiegt.
 In Abbildung \ref{sin1_0} dagegen überwiegt das niederfrequente Signal, da hier das Mischverhältnis der Widerstände $R_{8}$ und $R_{10}$ zugunsten des Tiefpasssignals eingestellt ist.
-
+\newpage
 \subsubsection{Fazit}
 Die Addiereschaltung ermöglicht es uns Signale, wie wir selbst erleben durften mit einfachsten Bauteilen, in ein gewünschtes Verhältnis zu setzen. Wichtig ist es dabei immer die Phasenverschiebung der zu addierenden Signale zu beachten, da es sonst im Extremfall dazu kommt, dass die beiden sich komplett gegenseitig aufheben. In unserer Schaltung wurde ein invertierender Addierer gebaut. Ebenso wäre es möglich einen nichtinvertierenden Addierer zu verbauen. Die Differenzen zwischen Simulation und der Messung der Steckbrettschaltung fielen relativ gering aus.
 
